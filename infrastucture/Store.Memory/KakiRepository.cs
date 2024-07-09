@@ -11,7 +11,7 @@
 
         public Kaki[] GetAllByTitle(string titlePart)
         {
-            return
+            return kakis.Where(kaki => kaki.Title.Contains(titlePart)).ToArray();
         }
     }
 }
