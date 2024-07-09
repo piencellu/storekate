@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Store
 {
-    internal interface IKakiRepository
+    public interface IKakiRepository
     {
+        Kaki[] GetAllByTitle(string titlePart);    
     }
 }
