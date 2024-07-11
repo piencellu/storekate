@@ -1,3 +1,5 @@
+using Store.Memory;
+
 namespace Store.Web
 {
     public class Program
@@ -8,8 +10,9 @@ namespace Store.Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddTransient<IKakiRepository, KakiRepository>();
 
-            var app = builder.Build();
+             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
