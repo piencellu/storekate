@@ -8,6 +8,8 @@ namespace Store
 {
     public interface IKakiRepository
     {
-        Kaki[] GetAllByTitle(string titlePart);    
+        Kaki[] GetAllByKakinum(string kakinum);
+
+        Kaki[] GetAllByTitleOrAuthorkak(string titleOrAuthorkak);    
     }
 }
