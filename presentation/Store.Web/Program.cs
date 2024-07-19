@@ -11,6 +11,7 @@ namespace Store.Web
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddTransient<IKakiRepository, KakiRepository>();
+            builder.Services.AddSingleton<KakiService>();
 
              var app = builder.Build();
 

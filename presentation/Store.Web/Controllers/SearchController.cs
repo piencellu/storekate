@@ -4,16 +4,17 @@ namespace Store.Web.Controllers
 {
     public class SearchController : Controller
     {
-        private readonly IKakiRepository kakiRepository;
 
-        public SearchController(IKakiRepository kakiRepository)
+        private readonly KakiService kakiService;
+
+        public SearchController(KakiService kakiService)
         {
-            this.kakiRepository = kakiRepository;
+            this.kakiService = kakiService;
         }
     
         public IActionResult Index(string query)
         {
-            var kakis = kakiRepository.GetAllByTitle(query);
+            var kakis = kakiService.GetAllByQuery(query);
 
             return View(kakis);
         }
