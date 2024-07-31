@@ -16,7 +16,7 @@ namespace Store.Web.Controllers
         {
             var kakis = kakiService.GetAllByQuery(query);
 
-            return View(kakis);
+            return View("Index", kakis);
         }
     }
 }

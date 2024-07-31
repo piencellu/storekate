@@ -14,9 +14,9 @@ namespace Store.Tests
         {
             var kakiRepositoryStub = new Mock<IKakiRepository>();
             kakiRepositoryStub.Setup(x => x.GetAllByKakinum(It.IsAny<string>()))
-                              .Returns(new[] { new Kaki(1, "", "", "") });
+                              .Returns(new[] { new Kaki(1, "", "", "", "", 0m) });
             kakiRepositoryStub.Setup(x => x.GetAllByTitleOrAuthorkak(It.IsAny<string>()))
-                             .Returns(new[] { new Kaki(2, "", "", "") });
+                             .Returns(new[] { new Kaki(2, "", "", "", "", 0m) });
 
             var kakiService = new KakiService(kakiRepositoryStub.Object);
             var validKakinum = "KAKINUMBER 123-45";
@@ -31,9 +31,9 @@ namespace Store.Tests
         {
             var kakiRepositoryStub = new Mock<IKakiRepository>();
             kakiRepositoryStub.Setup(x => x.GetAllByKakinum(It.IsAny<string>()))
-                              .Returns(new[] { new Kaki(1, "", "", "") });
+                              .Returns(new[] { new Kaki(1, "", "", "", "", 0m) });
             kakiRepositoryStub.Setup(x => x.GetAllByTitleOrAuthorkak(It.IsAny<string>()))
-                             .Returns(new[] { new Kaki(2, "", "", "") });
+                             .Returns(new[] { new Kaki(2, "", "", "", "", 0m) });
 
             var kakiService = new KakiService(kakiRepositoryStub.Object);
             var invalidKakinum = "123-45";
