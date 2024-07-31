@@ -12,12 +12,18 @@ public class Kaki
 
     public string Title { get; }
 
-    public Kaki(int id, string kakinum, string authorkak, string title)
+    public string Description { get; } 
+
+    public decimal Price { get; }
+
+    public Kaki(int id, string kakinum, string authorkak, string title, string description, decimal price)
     { 
         Id = id;
         Kakinum = kakinum;
         Authorkak = authorkak;
         Title = title; 
+        Description = description;
+        Price = price;
     }
 
     internal static bool IsKakinum(string s)

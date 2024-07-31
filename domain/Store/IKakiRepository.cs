@@ -10,6 +10,8 @@ namespace Store
     {
         Kaki[] GetAllByKakinum(string kakinum);
 
-        Kaki[] GetAllByTitleOrAuthorkak(string titleOrAuthorkak);    
+        Kaki[] GetAllByTitleOrAuthorkak(string titleOrAuthorkak);
+
+        Kaki GetById(int id);
     }
 }
